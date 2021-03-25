@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: white;
+}
+
+header {
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header img {
+    width: 75px;
+    height: auto;
+    margin-top: 50px;
+}
+
+header h1 {
+    font-size: 4.5rem;
+    font-family: 'Days One', sans-serif;
+    margin-top: 15px;
+    color: #3F37C9;
+    letter-spacing: 0.5rem;
+}
+
+main {
+    width: 100%;
+    min-width: 320px;
+    height: 75vh;
+    margin: 70px auto 30px;
+    font-family: 'Comfortaa', cursive;
+}
+
+.section-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 900px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.section-main h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color:  #4361EE;
+    letter-spacing: 0.3rem;
+}
+
+.players-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 30px 0;
+}
+
+.players-container .player {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.player span {
+    color: #4361EE;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.player input {
+    width: 250px;
+    height: 35px;
+    padding: 10px 4px;
+    margin-top: 5px;
+    border: 1px solid #4361EE;
+    border-radius: 4px;
+    background-color: white;
+    outline-color:#4361EE;
+    font-family: 'Comfortaa', cursive;
+    color: #4361EE;
+    font-weight: bold;
+}
+
+.player input:focus {
+    background-color: #fbfbfb;
+}
+
+.player input::placeholder{
+    color: #4895EF;
+}
+
+.button-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.button-container button {
+    width: 250px;
+    height: 50px;
+    margin-top: 10px; 
+    background: rgb(247,37,133);
+    background: linear-gradient(90deg, rgba(247,37,133,1) 0%, rgba(181,23,158,1) 50%, rgba(114,9,183,1) 100%);
+    border: none;
+    border-radius: 4px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: white;
+    letter-spacing: 0.3rem;
+}
+
+footer {
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+}
+
+footer .footer-container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 900px;
+    height: 100px;
+    border-top: 1px solid #4895EF;
+}
+
+footer figure {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+footer .logo--footer {
+    width: 50px;
+}
+
+footer .icon--github {
+    width: 30px;
+}
