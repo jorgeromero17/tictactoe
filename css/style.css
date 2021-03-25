@@ -160,3 +160,59 @@ footer .logo--footer {
 footer .icon--github {
     width: 30px;
 }
+
+@media only screen and (min-width: 600px) {
+
+    .player input {
+        width: 300px;
+        height: 35px;
+    }
+
+    .button-container button {
+        width: 300px;
+        height: 50px;
+    }
+
+  }
+
+
+@media only screen and (min-width: 800px) {
+
+    html {
+        font-size: 70%;
+    }
+    
+    header img {
+        margin-top: 70px;
+        width: 90px;
+    }
+    
+    header h1 {
+        font-size: 5rem;
+    }
+
+    .players-container{
+        flex-direction: row;
+        padding: 40px 0;
+    }
+
+    .players-container .player {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 5px 30px;
+    }
+
+    main {
+        margin: 100px auto 30px;
+    }
+
+    footer .logo--footer {
+        width: 55px;
+    }
+    
+    footer .icon--github {
+        width: 35px;
+    }
+    
+  }
