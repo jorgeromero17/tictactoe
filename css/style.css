@@ -42,7 +42,7 @@ main {
     width: 100%;
     min-width: 320px;
     height: 75vh;
-    margin: 70px auto 30px;
+    margin: 50px auto 30px;
     font-family: 'Comfortaa', cursive;
 }
 
@@ -84,6 +84,7 @@ main {
     background-position: center;
     width: 33.33%;
     height: 33.33%;
+    color: white;
 }
 
 .table-game tr td:hover {
@@ -305,7 +306,7 @@ footer .icon--github {
     }
 
     main {
-        margin: 100px auto 30px;
+        margin: 75px auto 30px;
     }
 
     footer .logo--footer {
