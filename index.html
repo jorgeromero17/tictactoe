@@ -35,22 +35,26 @@
             <p class="winner"></p>
             <table class="table-game">
                 <t>
-                    <td onclick="drawMove(this); this.onclick=null;" id="ZZ" data-col="0" data-row="0"></td>
-                    <td onclick="drawMove(this); this.onclick=null;" id="ZO" data-col="0" data-row="1"></td>
-                    <td onclick="drawMove(this); this.onclick=null;" id="ZT" data-col="0" data-row="2"></td>
+                    <td onclick="drawMove(this); " id="ZZ" data-col="0" data-row="0"></td>
+                    <td onclick="drawMove(this); " id="ZO" data-col="0" data-row="1"></td>
+                    <td onclick="drawMove(this); " id="ZT" data-col="0" data-row="2"></td>
                 </tr>
                 <tr>
-                    <td onclick="drawMove(this); this.onclick=null;" id="OZ" data-col="1" data-row="0"></td>
-                    <td onclick="drawMove(this); this.onclick=null;" id="OO" data-col="1" data-row="1"></td>
-                    <td onclick="drawMove(this); this.onclick=null;" id="OT" data-col="1" data-row="2"></td>
+                    <td onclick="drawMove(this); " id="OZ" data-col="1" data-row="0"></td>
+                    <td onclick="drawMove(this); " id="OO" data-col="1" data-row="1"></td>
+                    <td onclick="drawMove(this); " id="OT" data-col="1" data-row="2"></td>
                 </tr>
                 <tr>
-                    <td onclick="drawMove(this); this.onclick=null;" id="TZ" data-col="2" data-row="0"></td>
-                    <td onclick="drawMove(this); this.onclick=null;" id="TO" data-col="2" data-row="1"></td>
-                    <td onclick="drawMove(this); this.onclick=null;" id="TT" data-col="2" data-row="2"></td>
+                    <td onclick="drawMove(this); " id="TZ" data-col="2" data-row="0"></td>
+                    <td onclick="drawMove(this); " id="TO" data-col="2" data-row="1"></td>
+                    <td onclick="drawMove(this); " id="TT" data-col="2" data-row="2"></td>
                 </tr>
             </table>
             <p class="turn-player"></p>
+            <div class="div-buttons">
+                <button onclick="goBack();" id="goback">Go back</button>
+                <button onclick="resetGame();" id="resetgame">Reset game</button>
+            </div>
         </section>
     </main>
     <footer>
@@ -59,7 +63,7 @@
                 <img src="assets/icons/logo-footer.svg" alt="tictactoe 2021" class="logo--footer">
             </figure>
             <figure>
-                <a href="https://github.com/jorgeromero17"><img src="assets/icons/github.svg" alt="repositorio github" class="icon--github"></a>
+                <a href="https://github.com/jorgeromero17/tic-tac-toe"><img src="assets/icons/github.svg" alt="repositorio github" class="icon--github"></a>
             </figure>
         </section>
     </footer>

@@ -7,9 +7,11 @@ const tableGame = document.querySelector('.table-game');
 const pWinner = document.querySelector('.winner');
 pWinner.style.visibility = "hidden";
 
+const divButtons = document.querySelector('.div-buttons');
+divButtons.style.visibility = "hidden";
+
 turnPlayer = document.querySelector('.turn-player');
 let turn = 1;
-
 let cont = 0;
 
 let matrix = new Array(3);
@@ -17,11 +19,7 @@ for (let i = 0; i < matrix.length; i++) {
     matrix[i] = new Array(3);
 }
 
-for(let i = 0; i < matrix.length; i++){
-    for(let j = 0; j < matrix.length; j++){
-        matrix[i][j] = 0;
-    }      
-}
+initializeMatrix();
 
 function checknames(){
     let name1 = playername1.value;
@@ -54,11 +52,13 @@ function drawMove(elementTD){
 
     if(turn===1){
         elementTD.style.backgroundImage = "url('assets/icons/equis.svg')";
+        //elementTD.onclick=null;
         turn = 2;
         move = 1;
     }
     else{
         elementTD.style.backgroundImage = "url('assets/icons/cero.svg')";
+        //elementTD.onclick=null;
         turn = 1;
         move = 2;
     }
@@ -144,17 +144,44 @@ function showWinner(winner){
         pWinner.style.visibility = "visible";
         pWinner.textContent = `Tie`;
         turnPlayer.textContent = ' ';
-        
+        divButtons.style.visibility = "visible";
         
     }
     if(winner!=="none" && winner.length>1){
         pWinner.style.visibility = "visible";
         pWinner.textContent = `${winner} wins`;
         turnPlayer.textContent = ' ';
-        
+        divButtons.style.visibility = "visible";
     }
 }
 
+function resetGame(){
+    divButtons.style.visibility = "hidden";
+    pWinner.style.visibility = "hidden";
+
+    turn = 1;
+    cont = 0;
+    initializeMatrix();
+
+    const resetTD = document.querySelectorAll('.table-game td');
+    for (let i = 0 ; i < resetTD.length ; i++) {
+        resetTD[i].style.backgroundImage = "none";
+    }
+
+    writeturn(turn);
+}
+
+function goBack(){
+    location.reload();
+}
+
+function initializeMatrix(){
+    for(let i = 0; i < matrix.length; i++){
+        for(let j = 0; j < matrix.length; j++){
+            matrix[i][j] = 0;
+        }      
+    }
+}
 
 /* const ZZ = document.querySelector('#ZZ');
 const ZO = document.querySelector('#ZO');
@@ -165,3 +192,5 @@ const OT = document.querySelector('#OT');
 const TZ = document.querySelector('#TZ');
 const TO = document.querySelector('#TO');
 const TT = document.querySelector('#TT'); */
+
+//location.reload();

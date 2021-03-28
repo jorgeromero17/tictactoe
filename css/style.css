@@ -151,6 +151,30 @@ main {
      color: #B5179E;
  }
 
+.div-buttons {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    margin-top: 10px;
+}
+
+.div-buttons button {
+    margin-top: 10px; 
+    width: 200px;
+    height: 40px;
+    background: rgb(247,37,133);
+    background: linear-gradient(90deg, rgba(247,37,133,1) 0%, rgba(181,23,158,1) 50%, rgba(114,9,183,1) 100%);
+    border: none;
+    border-radius: 4px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: white;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+}
+
 .section-main h2 {
     font-size: 2rem;
     font-weight: 700;
@@ -275,6 +299,16 @@ footer .icon--github {
         height: 350px;
     }
 
+    .div-buttons {
+        flex-direction: row;
+        margin-top: 20px;
+    }
+    
+    .div-buttons button {
+        margin-right: 20px; 
+        margin-left: 20px;
+    }
+
   }
 
 
@@ -320,6 +354,11 @@ footer .icon--github {
     .section-game .winner{
         margin-top: 0px;
      }
+
+     .div-buttons button {
+        margin-right: 30px; 
+        margin-left: 30px;
+    }
     
   }
 
