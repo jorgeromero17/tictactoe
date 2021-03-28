@@ -38,6 +38,7 @@ header h1 {
 }
 
 main {
+    position: relative;
     width: 100%;
     min-width: 320px;
     height: 75vh;
@@ -53,7 +54,98 @@ main {
     max-width: 900px;
     height: auto;
     margin: 0 auto;
+    /* visibility:hidden; */
 }
+
+/* */
+.section-game {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto; 
+    width: 100%;
+    height: auto;  
+    visibility:hidden;
+}
+
+.table-game {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    border-collapse:collapse;
+    margin: 50px 0px 20px;
+}
+
+.table-game tr td {
+    width: 33.33%;
+    height: 33.33%;
+}
+
+.table-game tr td:hover {
+    background-color: rgba(76, 202, 240, 0.123);
+    cursor: pointer;
+}
+
+.table-game tr #ZZ {
+    border-top-left-radius: 10px;
+    border-right: 3px solid #4361EE;
+    border-bottom: 3px solid #4361EE;
+}
+
+.table-game tr #ZO {
+    border-right: 3px solid #4361EE;
+    border-bottom: 3px solid #4361EE;
+ }
+
+ .table-game tr #ZT {
+    border-top-right-radius: 10px;
+    border-bottom: 3px solid #4361EE;
+ }
+
+ .table-game tr #OZ {
+    border-right: 3px solid #4361EE;
+    border-bottom: 3px solid #4361EE;
+ }
+
+ .table-game tr #OO {
+    border-right: 3px solid #4361EE;
+    border-bottom: 3px solid #4361EE;
+ }
+
+ .table-game tr #OT {
+    border-bottom: 3px solid #4361EE; 
+ }
+
+ .table-game tr #TZ {
+    border-bottom-left-radius: 10px;
+    border-right: 3px solid #4361EE; 
+ }
+
+ .table-game tr #TO {
+    border-right: 3px solid #4361EE; 
+ }
+
+ .table-game tr #TT {
+    border-bottom-right-radius: 10px;
+ }
+
+ .section-game .winner{
+    background: rgb(247,37,133);
+    background: linear-gradient(90deg, rgba(247,37,133,1) 0%, rgba(181,23,158,1) 50%, rgba(114,9,183,1) 100%);
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin-top: 10px;
+ }
+
+ .section-game .turn-player {
+     font-size: 1.4rem;
+     color: #B5179E;
+ }
 
 .section-main h2 {
     font-size: 2rem;
@@ -173,6 +265,11 @@ footer .icon--github {
         height: 50px;
     }
 
+    .table-game {
+        width: 350px;
+        height: 350px;
+    }
+
   }
 
 
@@ -216,3 +313,13 @@ footer .icon--github {
     }
     
   }
+
+  
+@media only screen and (min-width: 1200px) {
+
+    .table-game {
+        width: 400px;
+        height: 400px;
+    }
+
+}
