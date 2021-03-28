@@ -79,6 +79,9 @@ main {
 }
 
 .table-game tr td {
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: center;
     width: 33.33%;
     height: 33.33%;
 }
@@ -218,6 +221,7 @@ main {
     font-size: 1.8rem;
     color: white;
     letter-spacing: 0.3rem;
+    cursor: pointer;
 }
 
 footer {
@@ -311,6 +315,10 @@ footer .icon--github {
     footer .icon--github {
         width: 35px;
     }
+
+    .section-game .winner{
+        margin-top: 0px;
+     }
     
   }
 
