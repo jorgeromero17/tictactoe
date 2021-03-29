@@ -145,7 +145,7 @@ function showWinner(winner){
         turnPlayer.textContent = ' ';
         divButtons.style.visibility = "visible";
 
-        for (let i = 0 ; i < resetTD.length ; i++) {
+        for (let i = 0 ; i < noclicktds.length ; i++) {
             noclicktds[i].style.pointerEvents = 'none';
         }
         
@@ -156,7 +156,7 @@ function showWinner(winner){
         turnPlayer.textContent = ' ';
         divButtons.style.visibility = "visible";
 
-        for (let i = 0 ; i < resetTD.length ; i++) {
+        for (let i = 0 ; i < noclicktds.length ; i++) {
             noclicktds[i].style.pointerEvents = 'none';
         }
     }

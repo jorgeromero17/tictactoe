@@ -41,7 +41,7 @@ main {
     position: relative;
     width: 100%;
     min-width: 320px;
-    height: 75vh;
+    height: auto;
     margin: 50px auto 30px;
     font-family: 'Comfortaa', cursive;
 }
@@ -249,39 +249,6 @@ main {
     cursor: pointer;
 }
 
-footer {
-    width: 100%;
-    min-width: 320px;
-    height: auto;
-}
-
-footer .footer-container{
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    margin: 0 auto;
-    width: 80%;
-    max-width: 900px;
-    height: 100px;
-    border-top: 1px solid #4895EF;
-}
-
-footer figure {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 30px;
-}
-
-footer .logo--footer {
-    width: 50px;
-}
-
-footer .icon--github {
-    width: 30px;
-}
-
 @media only screen and (min-width: 600px) {
 
     .player input {
@@ -341,14 +308,6 @@ footer .icon--github {
 
     main {
         margin: 75px auto 30px;
-    }
-
-    footer .logo--footer {
-        width: 55px;
-    }
-    
-    footer .icon--github {
-        width: 35px;
     }
 
     .section-game .winner{
