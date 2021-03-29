@@ -16,7 +16,6 @@ let matrix = new Array(3);
 for (let i = 0; i < matrix.length; i++) {
     matrix[i] = new Array(3);
 }
-
 initializeMatrix();
 
 function checknames(){
@@ -141,7 +140,7 @@ function showWinner(winner){
 
     if(winner==="none"){
         pWinner.style.visibility = "visible";
-        pWinner.textContent = `Tie`;
+        pWinner.textContent = `It's a tie`;
         turnPlayer.textContent = ' ';
         divButtons.style.visibility = "visible";
 
