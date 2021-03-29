@@ -6,10 +6,8 @@ const startgame = document.querySelector('.btnstartgame');
 const tableGame = document.querySelector('.table-game');
 const pWinner = document.querySelector('.winner');
 pWinner.style.visibility = "hidden";
-
 const divButtons = document.querySelector('.div-buttons');
 divButtons.style.visibility = "hidden";
-
 turnPlayer = document.querySelector('.turn-player');
 let turn = 1;
 let cont = 0;
@@ -53,12 +51,14 @@ function drawMove(elementTD){
     if(turn===1){
         elementTD.style.backgroundImage = "url('assets/icons/equis.svg')";
         //elementTD.onclick=null;
+        elementTD.style.pointerEvents = 'none';
         turn = 2;
         move = 1;
     }
     else{
         elementTD.style.backgroundImage = "url('assets/icons/cero.svg')";
         //elementTD.onclick=null;
+        elementTD.style.pointerEvents = 'none';
         turn = 1;
         move = 2;
     }
@@ -84,44 +84,44 @@ function evaluateMatrix(m){
     for (let i = 0; i < m.length; i++) {
         let j = 0;
         if(m[i][j]==1 && m[i][j+1]==1 && m[i][j+2]==1){
-            console.log("gana player 1 por fila");
+            //console.log("gana player 1 por fila");
             fl = true;
             winner = playername1.value;
         }
         else if(m[i][j]==2 && m[i][j+1]==2 && m[i][j+2]==2){
-            console.log("gana player 2 por fila");
+           // console.log("gana player 2 por fila");
             fl = true;
             winner = playername2.value;
         }
         else if(m[j][i]==1 && m[j+1][i]==1 && m[j+2][i]==1){
-            console.log("gana player 1 por columna");
+            //console.log("gana player 1 por columna");
             fl = true;
             winner = playername1.value;
         }
         else if(m[j][i]==2 && m[j+1][i]==2 && m[j+2][i]==2){
-            console.log("gana player 2 por columna");
+            //console.log("gana player 2 por columna");
             fl = true;
             winner = playername2.value;
         }
         else {
             if(i==0){
                 if(m[0][0]==1 && m[1][1]==1 && m[2][2]==1){
-                    console.log("gana player 1 por diagonal principal");
+                   // console.log("gana player 1 por diagonal principal");
                     fl = true;
                     winner = playername1.value;
                 }
                 else if(m[0][2]==1 && m[1][1]==1 && m[2][0]==1){
-                    console.log("gana player 1 por diagonal secundaria");
+                   // console.log("gana player 1 por diagonal secundaria");
                     fl = true;
                     winner = playername1.value;
                 }
                 else if(m[0][0]==2 && m[1][1]==2 && m[2][2]==2){
-                    console.log("gana player 2 por diagonal principal");
+                   // console.log("gana player 2 por diagonal principal");
                     fl = true;
                     winner = playername2.value;
                 }
                 else if(m[0][2]==2 && m[1][1]==2 && m[2][0]==2){
-                    console.log("gana player 2 por diagonal secundaria");
+                   // console.log("gana player 2 por diagonal secundaria");
                     fl = true;
                     winner = playername2.value;
                 }   
@@ -131,20 +131,23 @@ function evaluateMatrix(m){
     }
     cont++;
     if(!fl && cont==9){
-        //console.log("empate");
         winner = "none";
     }
-
     showWinner(winner);
-    //return fl,winner;
 }
 
 function showWinner(winner){
+    const noclicktds = document.querySelectorAll('.table-game td');
+
     if(winner==="none"){
         pWinner.style.visibility = "visible";
         pWinner.textContent = `Tie`;
         turnPlayer.textContent = ' ';
         divButtons.style.visibility = "visible";
+
+        for (let i = 0 ; i < resetTD.length ; i++) {
+            noclicktds[i].style.pointerEvents = 'none';
+        }
         
     }
     if(winner!=="none" && winner.length>1){
@@ -152,6 +155,10 @@ function showWinner(winner){
         pWinner.textContent = `${winner} wins`;
         turnPlayer.textContent = ' ';
         divButtons.style.visibility = "visible";
+
+        for (let i = 0 ; i < resetTD.length ; i++) {
+            noclicktds[i].style.pointerEvents = 'none';
+        }
     }
 }
 
@@ -165,9 +172,9 @@ function resetGame(){
 
     const resetTD = document.querySelectorAll('.table-game td');
     for (let i = 0 ; i < resetTD.length ; i++) {
-        resetTD[i].style.backgroundImage = "none";
+        resetTD[i].style.backgroundImage = 'none';
+        resetTD[i].style.pointerEvents = 'auto';
     }
-
     writeturn(turn);
 }
 
@@ -182,15 +189,3 @@ function initializeMatrix(){
         }      
     }
 }
-
-/* const ZZ = document.querySelector('#ZZ');
-const ZO = document.querySelector('#ZO');
-const ZT = document.querySelector('#ZT');
-const OZ = document.querySelector('#OZ');
-const OO = document.querySelector('#OO');
-const OT = document.querySelector('#OT');
-const TZ = document.querySelector('#TZ');
-const TO = document.querySelector('#TO');
-const TT = document.querySelector('#TT'); */
-
-//location.reload();
